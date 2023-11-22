@@ -1,3 +1,7 @@
+@font-face {
+    font-family: poppins;
+    src: url(../../fonts/poppins/Poppins-Medium.ttf);
+}
 .cuerpo{
     display: flex;
     flex-wrap: wrap;
@@ -6,15 +10,15 @@
   }
 .tarjeta{
     width: 300px;
-    border: 1px solid grey;
+    box-shadow: 0px 0px 10px grey;
     display: inline-block;
     border-radius: 10px;
     overflow: hidden;
-    margin: 10px;
+    margin: 15px;
 }
 .tarjeta-img{
     max-width: 300px;
-    max-height: 300px;
+    max-height: 200px;
     
 }
 .tarjeta_contenido{
@@ -22,7 +26,15 @@
     flex-direction: column;
     align-items: start;
     margin: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: poppins;
+}
+.contenido-precio{
+    font-size: 18px;
+}
+.contenido-km-año{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 .tarjeta-btn{
     display: flex;

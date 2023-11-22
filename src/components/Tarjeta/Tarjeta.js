@@ -33,8 +33,11 @@ export const Tarjeta = (props) =>{
         
                     <div className="tarjeta_contenido">
                         <h3>{producto.nombre}</h3>
-                        <p>Precio: {producto.precio}</p>
-                        <p>{producto.info}</p>
+                        <p className="contenido-precio">Precio: {producto.precio}</p>
+                        <div className="contenido-km-año">
+                        <p>{producto.km} Km</p>
+                        <p>{producto.año}</p>
+                        </div>
                     </div>
         
                     <div className="tarjeta-btn">
