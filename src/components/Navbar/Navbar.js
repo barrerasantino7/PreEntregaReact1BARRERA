@@ -1,37 +1,41 @@
+import { Link } from "react-router-dom";
 import { CartWidget } from "../CartWidget/CartWidget";
 import "./Navbar.css";
-export const Navbar = ()=> {
+
+
+export const Navbar = (props)=> {
+
     return (
         <nav className="navbar" >
             <div className="superior_navegador">
                 <ul className="navegador_lista">
-                    <li><a className="lista-enlace" href="#">Sobre Nosotros</a></li>
-                    <li><a className="lista-enlace" href="#">Inicio</a></li>
-                    <li><CartWidget/></li>
+                    <li><Link className="lista-enlace" to="/nosotros">Sobre Nosotros</Link></li>
+                    <li><Link className="lista-enlace" to="/">Inicio</Link></li>
+                    <li><CartWidget numero={props.numero}/></li>
                 </ul>
             </div>
 
             <div className="inferior_navegador">
                 <ul className="navegador_lista">
                     <li className="lista-elemento">
-                        <a href="#" className="circulo"></a>
-                        <a className="lista-enlace" href="#">Autos</a>
+                        <Link to="#" className="circulo"></Link>
+                        <Link className="lista-enlace" to="/productos/autos">Autos</Link>
                     </li>
                     <li className="lista-elemento">
-                        <a href="#" className="circulo"></a>
-                        <a className="lista-enlace" href="#">Motos</a>
+                        <Link to="#" className="circulo"></Link>
+                        <Link className="lista-enlace" to="/productos/motos">Motos</Link>
                     </li>
                     <li className="lista-elemento">
-                        <a href="#" className="circulo"></a>
-                        <a className="lista-enlace" href="#">Camiones</a>
+                        <Link to="#" className="circulo"></Link>
+                        <Link className="lista-enlace" to="/productos/camiones">Camiones</Link>
                     </li>
                     <li className="lista-elemento">
-                        <a href="#" className="circulo"></a>
-                        <a className="lista-enlace" href="#">Motorhome</a>
+                        <Link to="#" className="circulo"></Link>
+                        <Link className="lista-enlace" to="productos/motorhome">Motorhome</Link>
                     </li>
                     <li className="lista-elemento">
-                        <a href="#" className="circulo"></a>
-                        <a className="lista-enlace" href="#">Electricos</a>
+                        <Link to="#" className="circulo"></Link>
+                        <Link className="lista-enlace" to="productos/electricos">Electricos</Link>
                     </li>
                 </ul>
             </div>

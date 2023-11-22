@@ -1,6 +1,8 @@
 import "https://kit.fontawesome.com/3b40111a1a.js";
-export const CartWidget = () =>{
+import { Link } from "react-router-dom";
+export const CartWidget = (props) =>{
+
     return (
-        <a className="lista-enlace" href="#">Mis Favoritos <i class="fa-solid fa-star"></i></a>
+        <Link className="lista-enlace" to="/favorito">Mis Favoritos <i class="fa-solid fa-star">{props.numero}</i></Link>
     )
 } 

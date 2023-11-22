@@ -1,22 +1,53 @@
 import "./Tarjeta.css";
-import raptor from "../../img/raptor.jpg"
+import { useEffect, useState,} from "react";
+import { Link, useParams } from "react-router-dom";
+import { pedirDatos } from "../../helper/pedirdatos";
 
 export const Tarjeta = (props) =>{
+
+    const [productos, setProductos] = useState([]);
+    const categoria= useParams().categoria;
+
+    useEffect(()=> {
+        pedirDatos()
+        .then((res) =>{
+            if (categoria){
+                setProductos( res.filter((prod)=> prod.categoria === categoria));
+            } else {
+                setProductos(res);
+            }
+
+        })
+    },[categoria]) 
+
+
     return (
-        <div className="tarjeta">
+        <>
+        <main className='cuerpo'>
+        {
+            productos.map((producto) => {
+                return (
 
-            <img className="tarjeta-img" src={raptor}></img>
+                <div className="tarjeta" key={producto.id}>
+                    <img className="tarjeta-img" src={producto.imagen} alt={producto.nombre}/>
+        
+                    <div className="tarjeta_contenido">
+                        <h3>{producto.nombre}</h3>
+                        <p>Precio: {producto.precio}</p>
+                        <p>{producto.info}</p>
+                    </div>
+        
+                    <div className="tarjeta-btn">
+                        <Link to={`/producto/${producto.id}`} className="btn">Ver más</Link>
+                        <button className="btn" onClick={props.funcion}>Añadir a favoritos <i class="fa-solid fa-star"></i></button>
+                    </div>
+         
+                </div>
+                )
+            })
 
-            <div className="tarjeta_contenido">
-                <h3>Ford Raptor F-150</h3>
-                <p>Precio: 75.000</p>
-                <p>Esto va a ser una breve descripción del vehiculo.</p>
-            </div>
-
-            <div className="tarjeta-btn">
-                <button className="btn">Añadir a favoritos <i class="fa-solid fa-star"></i></button>
-            </div>
-            
-        </div>
+        }
+        </main>
+        </>
     )
 }

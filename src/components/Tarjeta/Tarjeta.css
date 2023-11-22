@@ -1,9 +1,21 @@
+.cuerpo{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+  }
 .tarjeta{
+    width: 300px;
     border: 1px solid grey;
     display: inline-block;
     border-radius: 10px;
     overflow: hidden;
     margin: 10px;
+}
+.tarjeta-img{
+    max-width: 300px;
+    max-height: 300px;
+    
 }
 .tarjeta_contenido{
     display: flex;
@@ -14,13 +26,14 @@
 }
 .tarjeta-btn{
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     margin: 10px;
 }
 .btn{
     background-color: rgb(2, 0, 92);
     color: white;
     border: none;
+    text-decoration: none;
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
