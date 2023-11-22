@@ -2,18 +2,21 @@
     margin-bottom: 100px;
 }
 .superior_navegador{
-    margin-bottom: 50px;
+    height: 50px;
+    background-color: rgb(0, 51, 102);
 }
 .inferior_navegador{
-    border-radius: 50px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
     margin: 0px 70px;
     box-shadow: 0px 25px 20px rgb(190, 190, 190) ;
-
+    background-color: rgb(0, 51, 102);
 }
 .navegador_lista{
     display: flex;
     justify-content: space-around;
     list-style: none;
+
 }
 .navegador_lista li{
     position: relative;
@@ -26,9 +29,9 @@
 }
 .lista-enlace{
     text-decoration: none;
-    color: black;
-    font-size: 15px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 17px;
+    font-family: poppins;
     display: flex;
     justify-content: center;
     transition: 0.2s;
@@ -60,6 +63,6 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: grey;
+    background-color: rgb(2, 0, 92);
     
 }

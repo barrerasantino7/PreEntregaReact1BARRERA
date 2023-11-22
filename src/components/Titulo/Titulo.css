@@ -1,6 +1,13 @@
+@font-face {
+  font-family: poppins;
+  src: url(../../fonts/poppins/Poppins-Medium.ttf);
+}
 .titulo{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(2, 0, 92);
+    font-family: poppins;
+    color: white;
     font-size: 50px;
-    margin: 20px;
+    height: 80px;
+    text-align: center;
+    background-color: rgb(0, 51, 102);
+    
   }

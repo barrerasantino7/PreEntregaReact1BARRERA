@@ -1,0 +1,40 @@
+@font-face {
+    font-family: poppins;
+    src: url(../../fonts/poppins/Poppins-Medium.ttf);
+}
+.detalle_producto{
+    display: flex;
+    box-shadow: 0px 0px 10px grey;
+    border-radius: 5px;
+    margin: 2%;
+    overflow: hidden;
+}
+.producto-img{
+    width: 50%;
+}
+.producto_contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contenido_informacion{
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+}
+.informacion-nombre{
+    text-align: center;
+    font-family: poppins;
+}
+.informacion_datos{
+    display: flex;
+    justify-content: space-around;
+    margin: 5px;
+}
+.producto-info{
+    font-family: poppins;
+}
+.contenido-btn{
+    text-align: end;
+    margin: 5px;
+}
