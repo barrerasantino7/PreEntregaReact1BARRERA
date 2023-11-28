@@ -6,6 +6,7 @@ export  const Producto = (props) =>{
     const [producto, setProductos] = useState(null);
 
     const id= useParams().id;
+    console.log(id);
 
     useEffect(()=>{
         pedirProducto(Number(id))

@@ -18,24 +18,19 @@ export const Navbar = (props)=> {
             <div className="inferior_navegador">
                 <ul className="navegador_lista">
                     <li className="lista-elemento">
-                        <Link to="#" className="circulo"></Link>
-                        <Link className="lista-enlace" to="/productos/autos">Autos</Link>
+                        <Link className="lista-enlace" to="/auto">Autos</Link>
                     </li>
                     <li className="lista-elemento">
-                        <Link to="#" className="circulo"></Link>
-                        <Link className="lista-enlace" to="/productos/motos">Motos</Link>
+                        <Link className="lista-enlace" to="/moto">Motos</Link>
                     </li>
                     <li className="lista-elemento">
-                        <Link to="#" className="circulo"></Link>
-                        <Link className="lista-enlace" to="/productos/camiones">Camiones</Link>
+                        <Link className="lista-enlace" to="/camion">Camiones</Link>
                     </li>
                     <li className="lista-elemento">
-                        <Link to="#" className="circulo"></Link>
-                        <Link className="lista-enlace" to="productos/motorhome">Motorhome</Link>
+                        <Link className="lista-enlace" to="/motorhome">Motorhome</Link>
                     </li>
                     <li className="lista-elemento">
-                        <Link to="#" className="circulo"></Link>
-                        <Link className="lista-enlace" to="productos/electricos">Electricos</Link>
+                        <Link className="lista-enlace" to="/electrico">Electricos</Link>
                     </li>
                 </ul>
             </div>

@@ -6,20 +6,20 @@ import { pedirDatos } from "../../helper/pedirdatos";
 export const Tarjeta = (props) =>{
 
     const [productos, setProductos] = useState([]);
-    const categoria= useParams().categoria;
+
+    const categoria = useParams().categoria;
+    console.log(categoria);
 
     useEffect(()=> {
         pedirDatos()
         .then((res) =>{
-            if (categoria){
-                setProductos( res.filter((prod)=> prod.categoria === categoria));
+            if (categoria) {
+                setProductos( res.filter((prod)=> prod.categoria === categoria) );
             } else {
                 setProductos(res);
             }
-
         })
-    },[categoria]) 
-
+    },[categoria])
 
     return (
         <>
@@ -36,7 +36,7 @@ export const Tarjeta = (props) =>{
                         <p className="contenido-precio">Precio: {producto.precio}</p>
                         <div className="contenido-km-año">
                         <p>{producto.km} Km</p>
-                        <p>{producto.año}</p>
+                        <p>Año: {producto.año}</p>
                         </div>
                     </div>
         

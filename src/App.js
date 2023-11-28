@@ -23,6 +23,7 @@ function App() {
       <BrowserRouter>
 
       <Titulo/>
+
       <Navbar numero={favorito}/>
 
       <Routes>
@@ -30,7 +31,7 @@ function App() {
         <Route path='/nosotros' element={<Nosotros/>}/>
         <Route path='/favorito' element={<Favorito/>}/>
         <Route path='/producto/:id' element={<Producto funcion={sumar}/>}/>
-        <Route path='/producto/:categoria' element={<Tarjeta funcion={sumar}/>}/>
+        <Route path='/:categoria' element={<Tarjeta funcion={sumar}/>}/>
       </Routes>
 
       </BrowserRouter>

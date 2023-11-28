@@ -15,10 +15,6 @@ export const pedirProducto = (id) =>{
 
         if (producto){
             resolve(producto)
-        } else {
-            reject({
-                error: "error"
-            })
         }
     })
 }
